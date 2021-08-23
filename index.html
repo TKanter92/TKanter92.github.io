@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio | Tyler A. Kanter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: rgb(255, 255, 255);}
+#About_Me {background-color: rgb(255, 255, 255);}
+#Projects {background-color: rgb(255, 255, 255);}
+#Contact {background-color: rgb(255, 255, 255);}
+</style>
+</head>
+<body>
+
+<div class = "header">
+    <h1>Tyler A. Kanter</h1>
+</div>
+
+<button class="tablink" onclick="openPage('Home', this)" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('About Me', this)">About Me</button>
+<button class="tablink" onclick="openPage('Projects', this)">Projects</button>
+<button class="tablink" onclick="openPage('Contact', this)">Contact</button>
+
+<div id="Home" class="tabcontent">
+    <ul>
+    <h1>Welcome!</h1>
+    <h2>Thanks for visiting! This website was created to show the students at DCC the capabilities of HTML by providing us an opportunity to explore it for ourselves, and to create this portfolio! Enjoy!</h2>
+    </ul>
+</div>
+
+<div id="About Me" class="tabcontent">
+    <img src = "./Portrait.jpg" alt = "Portrait" align = "right">
+    <ul>
+    <h1>About Me</h1>
+    <p> My name is Tyler A. Kanter. I am a 29 year old, veteran looking to find employment in software development. I am a Milwaukee, Wisconsin native, born and raised in a small town, called Muskego. I graduated there in 2010, and shortly thereafter expressed interest in the U.S. Army.</p>
+    <br>
+    <p>In 2012, I joined the Army in hopes of becoming a Military Police officer. However, those dreams were soon ended as I was medically separated for a heart condidtion I did not know I had. Fast forward to 2014, I received a medical waiver for said heart condition, and was back on the plane to basic training.</p>
+    <br>
+    <p> I spent the next 5 years as a Blackhawk Helicopter mechanic, apart of both the 1st Infantry Division, 1st Combat Aviation Brigade out of Fort Riley, Kansas, and the 2nd Infantry Division, 2nd Combat Aviation Brigade, out of Seoul, South Korea. I spent a few years as an aircrew member of the UH-60 Blackhawk and was able to see more of the world than some will ever get to. I also spent more than 1,000 hours as a mechanic on the ground, building and inspecting many different pieces and components of the same aircraft. </p>
+    <br>
+    <p>In 2019, I decided to change my military career path, and joined Civil Affairs. This role dealt with dealing with local populus of various nations, specifically those in conflict, with US troops on ground, in order to gain intelligence and attempt to build "hearts and minds" of the locals. It was a very rewarding career, as it taught me many life skills about communication.</p>
+    <p>Recently, in April of 2021, I joined the Wisconsin Air National Guard, where I am working in logistics. I am hoping to continue my military career for as long as I can.</p>
+    <br>
+    <p> After spending the last 7 years in the military, I decided I better start figuring out the next 7 years after. This opened my eyes to DCC. Now a student, I'm hoping to apply the skills obtained throughout the 12 week boot camp to land employment in a totally new career field. By the end of the 12 weeks, I will be knowledgable in JavaScript, Python, SQL, HTML, CSS, React, among many others.</p>
+    <br>
+    <p> Outside of my studies, I am a husband to my wife, Erin, which we will be celebrating our 5 year marriage anniversary this November. I have two beautiful daughters, with the ages of 2, and 8 months. I enjoy spending the time that I can with my daughters and my wife, and together we have been able to start our shared experiences as a family through activities such as hiking, traveling, fishing, and other outdoor recreation.</p> 
+    </ul>
+</div>
+
+<div id="Projects" class="tabcontent">
+    <ul>
+    <h1>Projects</h1>
+    <p>On my GitHub profile, one could see that we have been busy here at DCC!</p>
+    <br>
+    <p>I have had the pleasure in learning programming languages of JavaScript, Python, SQL, and more! I am looking forward to see what else this program has to offer.</p>
+    <br>
+    <p>So far, my classmates and I have had the opportunity to complete the following projects, which you can find on my GitHub profile, TKanter92:</p>
+    <p>1) Day Trip Generator</p>
+    <p>2) Alarm-Clock</p>
+    <p>3) Rock, Paper, Scissors, Lizard, Spock</p>
+    <p>4) Most Wanted</p>
+    <p>5) Robots vs. Dinosaurs</p>
+    <p>6) Soda Machine</p>
+    </ul>
+</div>
+
+<div id="Contact" class="tabcontent">
+    <ul>
+    <h1>Looking to connect?</h1>
+    <h2>Find me at the following:</h2>
+    <p>Email: TylerKanter@yahoo.com</p>
+    <br>
+    <p>GitHub: TKanter92</p>
+    <br>
+    <p>LinkedIn: tylerkanter92</p>
+    </ul>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
+
